@@ -1,0 +1,73 @@
+@import 'tailwindcss';
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@theme {
+    --font-sans: 'Plus Jakarta Sans', Inter, ui-sans-serif, system-ui, sans-serif;
+    --color-surface: #ffffff;
+    --color-canvas: #f8fafc;
+    --color-charcoal: #182230;
+    --color-muted: #667085;
+    --color-border: #e4e8ef;
+    --color-primary: #405be8;
+    --color-primary-hover: #3049c9;
+    --color-primary-secondary: #4663ed;
+    --color-primary-light: #eef2ff;
+
+    /* Backward compatibility aliases */
+    --color-forest: #405be8;
+    --color-deep: #3049c9;
+    --color-cream: #f8fafc;
+    --color-sage: #eef2ff;
+    --color-ink: #182230;
+    --color-mute: #667085;
+    --color-line: #e4e8ef;
+    --color-accent: #405be8;
+}
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+
+    body {
+        @apply bg-white font-sans text-[#182230] antialiased selection:bg-[#405BE8]/15 selection:text-[#405BE8];
+    }
+
+    a {
+        @apply transition duration-150;
+    }
+}
+
+@layer components {
+    .btn-primary {
+        @apply inline-flex items-center justify-center gap-2 rounded-xl bg-[#405BE8] px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-[#3049C9] focus:outline-none focus:ring-2 focus:ring-[#405BE8]/25 active:scale-[0.99] disabled:opacity-50 cursor-pointer;
+    }
+
+    .btn-secondary {
+        @apply inline-flex items-center justify-center gap-2 rounded-xl border border-[#E4E8EF] bg-white px-4 py-2.5 text-sm font-semibold text-[#182230] shadow-sm transition hover:bg-[#EEF2FF] hover:border-[#405BE8]/30 hover:text-[#405BE8] focus:outline-none cursor-pointer;
+    }
+
+    .btn-ghost {
+        @apply inline-flex items-center justify-center gap-2 rounded-xl border border-[#E4E8EF] bg-white px-4 py-2.5 text-sm font-semibold text-[#182230] shadow-sm transition hover:bg-[#EEF2FF] hover:text-[#405BE8] focus:outline-none cursor-pointer;
+    }
+
+    .btn-danger {
+        @apply inline-flex items-center justify-center gap-2 rounded-xl border border-rose-200 bg-rose-50 px-4 py-2 text-sm font-semibold text-rose-700 transition hover:bg-rose-100 cursor-pointer;
+    }
+
+    .card {
+        @apply rounded-2xl border border-[#E4E8EF] bg-white shadow-[0_1px_3px_rgba(0,0,0,0.03)];
+    }
+
+    .input {
+        @apply w-full rounded-xl border border-[#E4E8EF] bg-white px-3.5 py-2.5 text-sm text-[#182230] placeholder-[#98A2B3] outline-none transition focus:border-[#405BE8] focus:ring-2 focus:ring-[#405BE8]/15;
+    }
+
+    .badge {
+        @apply inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-semibold;
+    }
+}

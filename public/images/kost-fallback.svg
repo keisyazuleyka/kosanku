@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <rect width="800" height="500" fill="#F6F3EC"/>
+  <g transform="translate(320, 150)">
+    <rect x="0" y="40" width="160" height="130" rx="16" fill="#173F35"/>
+    <polygon points="80,0 -20,55 180,55" fill="#102F28"/>
+    <rect x="25" y="75" width="40" height="40" rx="6" fill="#D8E6D5"/>
+    <rect x="95" y="75" width="40" height="95" rx="6" fill="#E9A86B"/>
+    <circle cx="125" cy="120" r="4" fill="#173F35"/>
+  </g>
+  <text x="400" y="340" font-family="'Plus Jakarta Sans', sans-serif" font-size="22" font-weight="700" fill="#173F35" text-anchor="middle">Kosanku</text>
+  <text x="400" y="370" font-family="'Plus Jakarta Sans', sans-serif" font-size="14" fill="#737B74" text-anchor="middle">Foto belum tersedia</text>
+</svg>
+
